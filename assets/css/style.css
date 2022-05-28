@@ -10,32 +10,47 @@
 header {
     color: var(--azure-x-11-web-color);
     background-color: var(--prussian-blue);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 100px;
 }
 
 header h1 {
     font-size: 40px;
-    padding: 25px;
-}
-header a {
-    color: var(--azure-x-11-web-color);
-    font-size: 40px;
-    margin: 25px;
+    padding: 30px 30px;
 }
 
 nav {
+    position: absolute;
+    top: 100px;
     display: flex;
     flex-direction: column;
 }
 
 nav a {
     text-decoration: none;
+    font-size: 20px;
     color: var(--azure-x-11-web-color);
     background-color: var(--gunmetal);
     text-align: center;
     width: 100vw;
+    height: 0;
+}
+
+.menu-input {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.menu-input:checked ~ nav {
+    height: 144px;
+}
+
+.menu-input:checked ~ nav a {
+    height: 36px;
     padding: 10px 0;
 }
