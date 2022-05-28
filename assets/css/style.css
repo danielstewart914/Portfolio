@@ -6,3 +6,36 @@
     --azure-x-11-web-color: #eef9fbff;
     --forest-green-web: #3d8b2dff;
 }
+
+header {
+    color: var(--azure-x-11-web-color);
+    background-color: var(--prussian-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+header h1 {
+    font-size: 40px;
+    padding: 25px;
+}
+header a {
+    color: var(--azure-x-11-web-color);
+    font-size: 40px;
+    margin: 25px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--azure-x-11-web-color);
+    background-color: var(--gunmetal);
+    text-align: center;
+    width: 100vw;
+    padding: 10px 0;
+}
