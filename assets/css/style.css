@@ -7,6 +7,25 @@
     --forest-green-web: #3d8b2dff;
 }
 
+.screenreader {
+    position: absolute;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    color: var(--azure-x-11-web-color);
+    background-color: var(--gunmetal);
+}
+
+.screenreader:focus {
+    width: auto;
+    height: auto;
+    padding: 2px;
+    left: 0;
+    top:20px;
+    font-size: 20px;
+}
+
 header {
     color: var(--azure-x-11-web-color);
     background-color: var(--prussian-blue);
