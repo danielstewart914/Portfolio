@@ -58,11 +58,12 @@ nav {
     display: flex;
     flex-direction: column;
     transition: all ease-in-out 0.2s;
+    background-color: var(--gunmetal);
 }
 
 nav a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 0px;
     color: var(--azure-x-11-web-color);
     background-color: var(--gunmetal);
     text-align: center;
@@ -137,23 +138,58 @@ nav a:hover {
 
 #menu-input:checked ~ nav a {
     height: var(--nav-item);
+    font-size: 20px;
     padding: 10px 0;
+}
+
+.hero-banner {
+    background-image: url("../images/bellevue-skyline.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-banner h2 {
+    display: inline;
+    font-size: 25px;
+    text-align: center;
+    background-color: #08abc488;
+    padding: 20px;
+    font-weight: 700;
+    width: 100vw;
+    text-decoration: underline;
 }
 
 /* formatting for small screens and laptops */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .menu-word {
         position: absolute;
+        top: 0;
         right: calc(var(--menu-button-offset-right) + var(--menu-button-width));
         font-size: 40px;
     }
 
     #menu-input {
         height: var(--menu-button-height);
+        top: calc(var(--menu-button-offset-top) * 1.5);
     }
 
-    header h1 {
-        padding-left: 20vw;
+    .menu-label {
+        top: calc(var(--menu-button-offset-top) * 1.5);
+    }
+
+    .hero-banner {
+        height: 600px;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .hero-banner h2 {
+        width: auto;
     }
 
     nav {
@@ -170,6 +206,17 @@ nav a:hover {
 @media screen and (min-width: 1025px) {
     #menu-input, .menu-label {
         display: none;
+    }
+
+    .hero-banner {
+        height: 800px;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .hero-banner h2 {
+        width: auto;
+        font-size: 35px;
     }
 
     header {
@@ -190,6 +237,7 @@ nav a:hover {
         width: 25vw;
         height: var(--nav-item);
         padding: 10px 0;
+        font-size: 20px;
     }
 }
     
