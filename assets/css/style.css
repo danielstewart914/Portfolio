@@ -23,6 +23,7 @@ nav {
     top: 100px;
     display: flex;
     flex-direction: column;
+    transition: all ease-in-out 0.2s;
 }
 
 nav a {
@@ -33,18 +34,66 @@ nav a {
     text-align: center;
     width: 100vw;
     height: 0;
+    transition: all ease-in-out 0.2s;
 }
+
+/* invisible checkbox to control opening/closing of navigation menu */
 
 .menu-input {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
+    top: 35px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
     padding: 0;
     margin: 0;
     z-index: 1;
+    cursor: pointer;
 }
+
+/* hamburger menu */
+.menu-label {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+/* lines on hambuger menu */
+.menu-label span {
+    background: var(--azure-x-11-web-color);
+    display: block;
+    width: 30px;
+    height: 6px;
+    margin-bottom: 6px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+/* animate hambuger menu */
+
+/* rotate and move top bar down to form X */
+.menu-input:checked ~ .menu-label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 12px;
+}
+
+/* shrink and fade middle bar */
+.menu-input:checked ~ .menu-label span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+}
+
+/* rotate and move bottom bar up to form X */
+.menu-input:checked ~ .menu-label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: -12px;
+}
+
+/* animate menu open/close */
 
 .menu-input:checked ~ nav {
     height: 144px;
