@@ -4,6 +4,7 @@
     --pacific-blue: #08abc4ff;
     --gunmetal: #2a303cff;
     --azure-x-11-web-color: #eef9fbff;
+    --cadet-grey: #a0a9b1ff;
     --forest-green-web: #3d8b2dff;
 }
 
@@ -68,6 +69,11 @@ nav a {
     width: 100vw;
     height: 0;
     transition: all ease-in-out 0.2s;
+}
+
+nav a:hover {
+    background: var(--cadet-grey);
+    color: #000;
 }
 
 /* invisible checkbox to control opening/closing of navigation menu */
