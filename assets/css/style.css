@@ -206,6 +206,10 @@ main section p {
         margin-left: 4vw;
         margin-bottom: 30px;
     }
+
+    nav {
+        flex-direction: row;
+    }
 }
 
 
