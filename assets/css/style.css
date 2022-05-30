@@ -8,6 +8,10 @@
     --middle-blue: #7bd2e0ff;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* skip link formatting  */
 
 .screenreader {
@@ -195,15 +199,12 @@ main section p {
     padding: 10px;
 }
 
+/* common formatting for all screens 769px and up */
 @media screen and (min-width: 769px) {
     .hero-banner h2 {
         width: 35vw;
         margin-left: 4vw;
         margin-bottom: 30px;
-    }
-
-    nav {
-        flex-direction: row;
     }
 }
 
@@ -211,7 +212,7 @@ main section p {
 /* formatting for small screens and laptops */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-    /* move menu word to the left of menu button and increase font size */
+    /* move menu word to the left of menu button and increase its font size */
     .menu-word {
         position: absolute;
         top: 0;
@@ -219,7 +220,7 @@ main section p {
         font-size: 40px;
     }
 
-    /* adjust menu button once the menu word has been moved */
+    /* adjust hamberger menu button once the menu word has been moved */
     #menu-input {
         height: var(--menu-button-height);
         top: calc(var(--menu-button-offset-top) * 1.5);
@@ -234,11 +235,12 @@ main section p {
     }
 
     nav {
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
     nav a {
-        width: 50vw;
+        width: 49vw;
     }
 }
 
