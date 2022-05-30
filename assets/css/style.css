@@ -1,11 +1,11 @@
 :root {
     --prussian-blue: #0b3142ff;
     --black-coral: #515867ff;
-    --pacific-blue: #08abc4ff;
+    --pacific-blue-50: #08abc488;
     --gunmetal: #2a303cff;
     --azure-x-11-web-color: #eef9fbff;
     --cadet-grey: #a0a9b1ff;
-    --forest-green-web: #3d8b2dff;
+    --middle-blue: #7bd2e0ff;
 }
 
 /* skip link formatting  */
@@ -29,9 +29,12 @@
     font-size: 20px;
 }
 
+body {
+
+}
 
 header {
-    /* variables for quickly changing hambuger button size and placement */
+    /* variables for changing hambuger button size and placement */
     --menu-button-offset-top: 20px;
     --menu-button-offset-right: 25px;
     --menu-button-width: 50px;
@@ -52,6 +55,7 @@ header h1 {
     padding: 30px;
 }
 
+/* navigation menu */
 nav {
     position: absolute;
     top: 100px;
@@ -135,7 +139,6 @@ nav a:hover {
 }
 
 /* animate menu opening/closing */
-
 #menu-input:checked ~ nav a {
     height: var(--nav-item);
     font-size: 20px;
@@ -157,11 +160,34 @@ nav a:hover {
     display: inline;
     font-size: 25px;
     text-align: center;
-    background-color: #08abc488;
+    background-color: var(--pacific-blue-50);
     padding: 20px;
+    border: var(--gunmetal) solid 1px;
     font-weight: 700;
     width: 100vw;
-    text-decoration: underline;
+}
+
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section h2 {
+    font-size: 25px;
+    text-align: center;
+    color: var(--gunmetal);
+    width: 80vw;
+    padding: 10px;
+    margin: 5px auto;
+    border-bottom: var(--gunmetal) solid 2px;
+}
+
+main section p {
+    font-size: 15px;
+    width: 80vw;
+    padding: 10px;
 }
 
 /* formatting for small screens and laptops */
