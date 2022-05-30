@@ -210,6 +210,10 @@ main section p {
     nav {
         flex-direction: row;
     }
+		
+		.hero-banner h2 {
+			box-shadow: 5px 5px 15px #111;
+		}
 }
 
 
@@ -239,12 +243,11 @@ main section p {
     }
 
     nav {
-        flex-direction: row;
         flex-wrap: wrap;
     }
 
     nav a {
-        width: 49vw;
+        width: 50vw;
     }
 }
 
@@ -276,6 +279,7 @@ main section p {
     nav {
         position: static;
         justify-content: space-evenly;
+				flex-wrap: nowrap;
     }
 
     nav a {
