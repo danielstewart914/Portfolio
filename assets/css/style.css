@@ -76,7 +76,7 @@ nav a {
     transition: all ease-in-out 0.2s;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
     background: var(--cadet-grey);
     color: #000;
 }
@@ -139,7 +139,7 @@ nav a:hover {
 }
 
 /* animate menu opening/closing */
-#menu-input:checked ~ nav a {
+#menu-input:checked ~ nav a, nav:focus-within a {
     height: var(--nav-item);
     font-size: 20px;
     padding: 10px 0;
