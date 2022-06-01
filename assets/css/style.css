@@ -168,41 +168,79 @@ nav a:hover, nav a:focus {
 }
 
 .hero-banner h2 {
-    display: inline;
     font-size: 25px;
     text-align: center;
     background-color: var(--pacific-blue-50);
     padding: 20px;
     border: #111 solid 2px;
     font-weight: 700;
-    width: 100vw;
+    width: 100%;
+}
+
+main {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 main section {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 main section h2 {
     font-size: 25px;
     text-align: center;
     color: var(--gunmetal);
-    width: 80vw;
+    width: 100%;
     padding: 10px;
-    margin: 5px auto;
     border-bottom: var(--gunmetal) solid 2px;
 }
 
 main section p {
     font-size: 15px;
-    width: 80vw;
+    width: 80%;
     padding: 10px;
 }
 
 .project-list {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 calc(100% - 20px);
+    background-color: var(--pacific-blue-50);
+    background-blend-mode: soft-light;
+    min-height: 200px;
+    border: 5px solid var(--prussian-blue);
+    margin: 10px;
+    text-decoration: none;
+    background-size: 100%;
+    background-position: center;
+}
+
+.project:hover {
+    background-color: #00000000;
+}
+
+.project div {
+    background-color: var(--black-coral);
+    color:var(--azure-x-11-web-color);
+    padding: 10px 15px;
+}
+
+.project h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.item-1, .item-2, .item-3, .item-4, .item-5 {
+    background-image: url("https://via.placeholder.com/1000?text=Project+Placeholder+Image");
 }
 
 /* common formatting for small screens and laptops */
@@ -246,6 +284,10 @@ main section p {
     nav a {
         width: 50vw;
     }
+
+    .project:not(:first-child) {
+        flex-basis: calc(50% - 20px);
+    }
 }
 
 /* formatting for large screens */
@@ -280,6 +322,10 @@ main section p {
         height: var(--nav-item);
         padding: 10px 0;
         font-size: 20px;
+    }
+
+    .project {
+        min-height: 250px;
     }
 }
     
