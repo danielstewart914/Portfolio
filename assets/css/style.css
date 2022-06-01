@@ -202,21 +202,7 @@ main section p {
 
 .project-list {
     display: flex;
-}
-
-.project {
-    width: 80vw;
-    padding: 10px;
-    margin: 10px;
-    background: var(--prussian-blue);
-}
-
-.project img {
-    width: 100%;
-}
-
-.featured {
-    width: 90vw;
+    flex-direction: column;
 }
 
 /* common formatting for small screens and laptops */
