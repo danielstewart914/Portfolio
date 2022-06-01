@@ -38,16 +38,18 @@ body {
 
 header {
     /* variables for changing hambuger button size and placement */
-    --menu-button-offset-top: 20px;
-    --menu-button-offset-right: 25px;
     --menu-button-width: 50px;
     --menu-button-height: 40px;
     --menu-button-text: 20px;
 
     /* other variables */
     --nav-item: 36px;
+    --title-margin: 30px;
 
     /* header formatting */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: var(--azure-x-11-web-color);
     background-color: var(--prussian-blue);
     height: 100px;
@@ -55,7 +57,8 @@ header {
 
 header h1 {
     font-size: 40px;
-    padding: 30px;
+    text-align: center;
+    margin: var(--title-margin);
 }
 
 /* navigation menu */
@@ -95,13 +98,12 @@ nav a:hover, nav a:focus {
 
 /* hamburger menu */
 .menu-label {
+    position: relative;
+    margin: auto var(--title-margin);
     font-size: var(--menu-button-text);
     text-align: center;
-    position: absolute;
-    top: var(--menu-button-offset-top);
-    right: var(--menu-button-offset-right);
     width: var(--menu-button-width);
-    height: var(--menu-button-height);
+    height: calc(var(--menu-button-height) + var(--menu-button-text));
     cursor: pointer;
 }
 
@@ -217,7 +219,7 @@ main section p {
     width: 90vw;
 }
 
-/* common formatting for all screens 769px and up */
+/* common formatting for small screens and laptops */
 @media screen and (min-width: 769px) {
     .hero-banner h2 {
         width: 35vw;
@@ -234,28 +236,17 @@ main section p {
 		.hero-banner h2 {
 			box-shadow: 5px 5px 15px #111;
 		}
-}
-
-
-/* formatting for small screens and laptops */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
 
     /* move menu word to the left of menu button and increase its font size */
     .menu-word {
         position: absolute;
-        top: 0;
-        right: calc(var(--menu-button-offset-right) + var(--menu-button-width));
+        right: calc(var(--menu-button-width) * 1.5);
         font-size: 40px;
     }
 
     /* adjust hamberger menu button once the menu word has been moved */
-    #menu-input {
-        height: var(--menu-button-height);
-        top: calc(var(--menu-button-offset-top) * 1.5);
-    }
-
     .menu-label {
-        top: calc(var(--menu-button-offset-top) * 1.5);
+        height: var(--menu-button-height);
     }
 
     .hero-banner {
@@ -285,10 +276,11 @@ main section p {
 
     header {
         height: auto;
+        flex-wrap:  wrap;
     }
 
     header h1 {
-        text-align: center;
+        width: 100vw;
     }
 
     /* reveal menu */
