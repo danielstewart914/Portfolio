@@ -56,9 +56,10 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     margin: var(--title-margin);
+    transition: all 0.8s;
 }
 
 /* navigation menu */
@@ -68,7 +69,7 @@ nav {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in 0.2s;
     background-color: var(--gunmetal);
 }
 
@@ -80,7 +81,7 @@ nav a {
     text-align: center;
     width: 100vw;
     height: 0;
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in 0.2s;
 }
 
 /* highlight menu */
@@ -155,6 +156,7 @@ nav a:hover, nav a:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: height 0.5s;
 }
 
 .hero-banner img {
@@ -175,6 +177,7 @@ nav a:hover, nav a:focus {
     border: #111 solid 2px;
     font-weight: 700;
     width: 100%;
+    transition: all 0.5s;
 }
 
 main {
@@ -221,6 +224,7 @@ main section p {
     text-decoration: none;
     background-size: 100%;
     background-position: center;
+    transition: background-color 0.35s ease-in;
 }
 
 .project:hover {
@@ -245,6 +249,9 @@ main section p {
 
 /* common formatting for small screens and laptops */
 @media screen and (min-width: 769px) {
+    header h1 {
+        font-size: 40px;
+    }
     .hero-banner h2 {
         width: 35vw;
         margin-left: 4vw;
@@ -257,9 +264,9 @@ main section p {
         justify-content: space-evenly;
     }
 		
-		.hero-banner h2 {
-			box-shadow: 5px 5px 15px #111;
-		}
+	.hero-banner h2 {
+		box-shadow: 5px 5px 15px #111;
+	}
 
     /* move menu word to the left of menu button and increase its font size */
     .menu-word {
@@ -308,13 +315,14 @@ main section p {
     }
 
     header h1 {
-        width: 100vw;
+        font-size: 50px;
     }
 
     /* reveal menu */
     nav {
         position: static;
 		flex-wrap: nowrap;
+        transition: none;
     }
 
     nav a {
@@ -322,6 +330,7 @@ main section p {
         height: var(--nav-item);
         padding: 10px 0;
         font-size: 20px;
+        transition: none;
     }
 
     .project {
