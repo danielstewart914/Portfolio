@@ -5,7 +5,7 @@
     --middle-grey: #515867ff;
     --light-grey: #a0a9b1ff;
     --highlight-50: #08abc488;
-    --gunmetal: #2a303cff;
+    --dark-grey: #2a303cff;
     --light: #eef9fbff;
     --middle-blue: #7bd2e0ff;
 }
@@ -24,7 +24,7 @@ body {
     height: 1px;
     top: auto;
     color: var(--light);
-    background-color: var(--gunmetal);
+    background-color: var(--dark-grey);
 }
 
 .screenreader:focus {
@@ -70,14 +70,14 @@ header h1 {
     display: flex;
     flex-direction: column;
     transition: all ease-in 0.2s;
-    background-color: var(--gunmetal);
+    background-color: var(--dark-grey);
 }
 
 .nav a {
     text-decoration: none;
     font-size: 0px;
     color: var(--light);
-    background-color: var(--gunmetal);
+    background-color: var(--dark-grey);
     text-align: center;
     width: 100vw;
     height: 0;
@@ -194,10 +194,10 @@ main section {
 main section h2 {
     font-size: 25px;
     text-align: center;
-    color: var(--gunmetal);
+    color: var(--dark-grey);
     width: 100%;
     padding: 10px;
-    border-bottom: var(--gunmetal) solid 2px;
+    border-bottom: var(--dark-grey) solid 2px;
 }
 
 main section p {
