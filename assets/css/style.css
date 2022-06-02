@@ -1,18 +1,18 @@
 :root {
 
     /* custom colors */
-    --prussian-blue: #0b3142ff;
-    --black-coral: #515867ff;
-    --pacific-blue-50: #08abc488;
+    --primary: #0b3142ff;
+    --middle-grey: #515867ff;
+    --light-grey: #a0a9b1ff;
+    --highlight-50: #08abc488;
     --gunmetal: #2a303cff;
-    --azure-x-11-web-color: #eef9fbff;
-    --cadet-grey: #a0a9b1ff;
+    --light: #eef9fbff;
     --middle-blue: #7bd2e0ff;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--azure-x-11-web-color);
+    background: var(--light);
 }
 
 /* skip link formatting  */
@@ -23,7 +23,7 @@ body {
     width: 1px;
     height: 1px;
     top: auto;
-    color: var(--azure-x-11-web-color);
+    color: var(--light);
     background-color: var(--gunmetal);
 }
 
@@ -42,7 +42,7 @@ header {
     --menu-button-height: 40px;
     --menu-button-text: 20px;
 
-    /* other variables */
+    /* other variables for header formatting */
     --nav-item: 36px;
     --title-margin: 30px;
 
@@ -50,8 +50,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--azure-x-11-web-color);
-    background-color: var(--prussian-blue);
+    color: var(--light);
+    background-color: var(--primary);
     height: 100px;
 }
 
@@ -63,7 +63,7 @@ header h1 {
 }
 
 /* navigation menu */
-nav {
+.nav {
     position: absolute;
     top: 100px;
     width: 100vw;
@@ -73,10 +73,10 @@ nav {
     background-color: var(--gunmetal);
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     font-size: 0px;
-    color: var(--azure-x-11-web-color);
+    color: var(--light);
     background-color: var(--gunmetal);
     text-align: center;
     width: 100vw;
@@ -85,8 +85,8 @@ nav a {
 }
 
 /* highlight menu */
-nav a:hover, nav a:focus {
-    background: var(--cadet-grey);
+.nav a:hover, .nav a:focus {
+    background: var(--light-grey);
     color: #000;
 }
 
@@ -110,7 +110,7 @@ nav a:hover, nav a:focus {
 
 /* lines on hambuger menu */
 .menu-label .bar {
-    background: var(--azure-x-11-web-color);
+    background: var(--light);
     display: block;
     width: var(--menu-button-width);
     height: calc(var(--menu-button-height) * 0.2);
@@ -141,7 +141,7 @@ nav a:hover, nav a:focus {
 }
 
 /* open menu when menu input is checked or when focused on */
-#menu-input:checked ~ nav a, nav:focus-within a {
+#menu-input:checked ~ .nav a, .nav:focus-within a {
     height: var(--nav-item);
     font-size: 20px;
     padding: 10px 0;
@@ -165,14 +165,14 @@ nav a:hover, nav a:focus {
     max-width: 500px;
     max-height: 500px;
     margin: 4vw;
-    border: var(--prussian-blue) solid 4px;
+    border: var(--primary) solid 4px;
     box-shadow: 5px 5px 15px #111;
 }
 
 .hero-banner h2 {
     font-size: 25px;
     text-align: center;
-    background-color: var(--pacific-blue-50);
+    background-color: var(--highlight-50);
     padding: 20px;
     border: #111 solid 2px;
     font-weight: 700;
@@ -216,10 +216,10 @@ main section p {
     flex-direction: column;
     align-items: flex-start;
     flex: 1 0 calc(100% - 20px);
-    background-color: var(--pacific-blue-50);
+    background-color: var(--highlight-50);
     background-blend-mode: soft-light;
     min-height: 200px;
-    border: 5px solid var(--prussian-blue);
+    border: 5px solid var(--primary);
     margin: 10px;
     text-decoration: none;
     background-size: 100%;
@@ -232,8 +232,8 @@ main section p {
 }
 
 .project div {
-    background-color: var(--black-coral);
-    color:var(--azure-x-11-web-color);
+    background-color: var(--middle-grey);
+    color:var(--light);
     padding: 10px 15px;
 }
 
@@ -245,6 +245,23 @@ main section p {
 
 .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7 {
     background-image: url("https://via.placeholder.com/1000?text=Project+Placeholder+Image");
+}
+
+.contact address {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact address a {
+    padding: 5px;
+}
+
+.contact address a:hover {
+    background: var(--middle-blue);
 }
 
 /* common formatting for small screens and laptops */
@@ -259,7 +276,7 @@ main section p {
         max-width: 500px;
     }
 
-    nav {
+    .nav {
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -284,11 +301,11 @@ main section p {
         height: 600px;
     }
 
-    nav {
+    .nav {
         flex-wrap: wrap;
     }
 
-    nav a {
+    .nav a {
         width: 50vw;
     }
 
@@ -319,14 +336,14 @@ main section p {
     }
 
     /* reveal menu */
-    nav {
+    .nav {
         position: static;
 		flex-wrap: nowrap;
         transition: none;
     }
 
-    nav a {
-        width: 25vw;
+    .nav a {
+        width: 25%;
         height: var(--nav-item);
         padding: 10px 0;
         font-size: 20px;
