@@ -37,7 +37,7 @@ body {
 }
 
 header {
-    /* variables for changing hambuger button size and placement */
+    /* variables for changing hambuger button size */
     --menu-button-width: 50px;
     --menu-button-height: 40px;
     --menu-button-text: 20px;
@@ -231,7 +231,7 @@ main section p {
 
 .project:hover {
     background-color: #00000000;
-    flex: 1 0 100%;
+    flex-basis: 100%;
 }
 
 .project div {
@@ -277,17 +277,14 @@ main section p {
         margin-left: 4vw;
         margin-bottom: 30px;
         max-width: 500px;
+        box-shadow: 5px 5px 15px #111;
     }
 
     .nav {
         flex-direction: row;
         justify-content: space-evenly;
     }
-		
-	.hero-banner h2 {
-		box-shadow: 5px 5px 15px #111;
-	}
-
+    
     /* move menu word to the left of menu button and increase its font size */
     .menu-word {
         position: absolute;
