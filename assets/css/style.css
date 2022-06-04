@@ -1,5 +1,5 @@
 :root {
-
+    
     /* custom colors */
     --primary: #0b3142ff;
     --middle-grey: #515867ff;
@@ -30,7 +30,7 @@ body {
 .screenreader:focus {
     width: auto;
     height: auto;
-    padding: 2px;
+    padding: 5px;
     left: 10px;
     top: 36px;
     font-size: 25px;
@@ -211,6 +211,10 @@ main section p {
     padding: 20px;
 }
 
+.work p {
+    text-align: center;
+}
+
 .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -346,6 +350,10 @@ main section p {
 
 /* formatting for large screens */
 @media screen and (min-width: 1025px) {
+
+    .screenreader:focus {
+        top: 50px;
+    }
 
     /* hide menu button */
     #menu-input, .menu-label {
