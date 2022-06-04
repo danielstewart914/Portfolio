@@ -234,7 +234,7 @@ main section p {
                 background-color 0.4s ease-in;
 }
 
-.project:hover {
+.project:hover, .project:focus {
     background-color: #00000000;
     flex-basis: 100%;
 }
@@ -276,12 +276,13 @@ main section p {
                 color 0.2s  ease-in-out;
 }
 
-.contact address a:hover {
+.contact address a:hover, .contact address a:focus {
     background: var(--primary);
     color: var(--light);
 }
 
-.contact address a:hover .gitHub-logo, .contact address a:hover .email-icon {
+.contact address a:hover .gitHub-logo, .contact address a:focus .gitHub-logo, 
+.contact address a:hover .email-icon, .contact address a:focus .email-icon {
     filter: invert(1);
 }
 
