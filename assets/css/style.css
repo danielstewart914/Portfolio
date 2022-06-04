@@ -260,11 +260,20 @@ main section p {
 }
 
 .contact address a {
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .contact address a:hover {
     background: var(--middle-blue);
+}
+
+.linkedIn-logo, .gitHub-logo, .email-icon {
+    width: 2em;
+    height: 2em;
 }
 
 /* common formatting for small screens and laptops */
