@@ -196,18 +196,19 @@ main section {
 }
 
 main section h2 {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     color: var(--dark-grey);
     width: 100%;
     padding: 10px;
-    border-bottom: var(--dark-grey) solid 2px;
+    margin: 10px auto;
+    border-bottom: var(--dark-grey) solid 3px;
 }
 
 main section p {
     font-size: 15px;
     width: 90%;
-    padding: 10px;
+    padding: 20px;
 }
 
 .project-list {
@@ -375,6 +376,11 @@ main section p {
         padding: 10px 0;
         font-size: 20px;
         transition: none;
+    }
+
+    main section h2 {
+        font-size: 40px;
+        border-bottom: solid 4px;
     }
 
     .project {
