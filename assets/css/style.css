@@ -1,5 +1,5 @@
 :root {
-    
+
     /* custom colors */
     --primary: #0b3142ff;
     --middle-grey: #515867ff;
@@ -195,8 +195,13 @@ main section {
     align-items: center;
 }
 
+.tldr {
+    font-weight: 550;
+}
+
 main section h2 {
     font-size: 30px;
+    font-weight: 600;
     text-align: center;
     color: var(--dark-grey);
     width: 100%;
@@ -206,7 +211,8 @@ main section h2 {
 }
 
 main section p {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 18px;
     width: 90%;
     padding: 20px;
 }
