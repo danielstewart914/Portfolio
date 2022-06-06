@@ -14,7 +14,7 @@
 
         /* other variables */
         --nav-item: 36px;
-        --title-margin: 35px;
+        --title-margin: 20px;
         --logo-size: 70px;
 }
 
@@ -50,7 +50,7 @@ body {
     background: var(--light);
     min-width: var(--logo-size);
     min-height: var(--logo-size);
-    margin: 0 var(--title-margin);
+    margin: var(--title-margin);
     outline: 2px solid var(--black);
 }
 
@@ -394,6 +394,7 @@ main section p {
 
 /* formatting for small screens and laptops */
 @media screen and (min-width: 769px) { 
+
     header h1 {
         font-size: 40px;
     }
