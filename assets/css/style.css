@@ -55,6 +55,7 @@ header {
     height: 100px;
 }
 
+/* header title */
 header h1 {
     font-size: 35px;
     text-align: center;
@@ -73,6 +74,7 @@ header h1 {
     background-color: var(--dark-grey);
 }
 
+/* set navigation items to be hidden initially */
 .nav a {
     text-decoration: none;
     font-size: 0px;
@@ -159,6 +161,7 @@ header h1 {
     transition: height 0.5s;
 }
 
+/* My photo */
 .hero-banner img {
     width: 35vw;
     height: 35vw;
@@ -169,6 +172,7 @@ header h1 {
     box-shadow: 5px 5px 15px #111;
 }
 
+/* Welcome message */
 .hero-banner h2 {
     font-size: 25px;
     text-align: center;
@@ -199,6 +203,7 @@ main section {
     font-weight: 550;
 }
 
+/* Section titles */
 main section h2 {
     font-size: 30px;
     font-weight: 600;
@@ -227,6 +232,7 @@ main section p {
     justify-content: center;
 }
 
+/* project tiles */
 .project {
     display: flex;
     flex-direction: column;
@@ -245,10 +251,12 @@ main section p {
                 background-color 0.4s ease-in;
 }
 
+/* make featured project larger */
 .project:first-child {
     min-height: 300px;
 }
 
+/* Fade background blend and expand slightly when hovered or focused */
 .project:hover, .project:focus {
     background-color: #00000000;
     flex-basis: 100%;
@@ -260,11 +268,14 @@ main section p {
     padding: 10px 15px;
 }
 
+/* Project Titles */
 .project h3 {
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 5px;
 }
+
+/* Background images for projects */
 
 .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7 {
     background-image: url("https://via.placeholder.com/1000?text=Project+Placeholder+Image");
@@ -279,6 +290,7 @@ main section p {
     text-align: center;
 }
 
+/* contact link formatting */
 .contact address a {
     display: flex;
     align-items: center;
@@ -291,27 +303,32 @@ main section p {
                 color 0.2s  ease-in-out;
 }
 
+/* highlight links is contact section */
 .contact address a:hover, .contact address a:focus {
     background: var(--primary);
     color: var(--light);
 }
 
+/* invert icons to be more visible with darker background */
 .contact address a:hover .gitHub-logo, .contact address a:focus .gitHub-logo, 
 .contact address a:hover .email-icon, .contact address a:focus .email-icon {
     filter: invert(1);
 }
 
+/* icon formatting */
 .linkedIn-logo, .gitHub-logo, .email-icon {
     width: 2em;
     height: 2em;
     transition: all 0.2s ease-in-out;
 }
 
-/* common formatting for small screens and laptops */
+/* formatting for small screens and laptops */
 @media screen and (min-width: 769px) {
     header h1 {
         font-size: 40px;
     }
+
+    /* move welcome message below my photo */
     .hero-banner h2 {
         width: 35vw;
         margin-left: 4vw;
@@ -323,7 +340,15 @@ main section p {
     .nav {
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+
     }
+
+    /* adjust menu items to 2 columns instead of one */
+    .nav a {
+        width: 50vw;
+    }
+
     
     /* move menu word to the left of menu button and increase its font size */
     .menu-word {
@@ -332,27 +357,22 @@ main section p {
         font-size: 40px;
     }
 
-    /* adjust hamberger menu button once the menu word has been moved */
+    /* adjust hamberger menu button once the menu word has moved to the side */
     .menu-label {
         height: var(--menu-button-height);
     }
 
+    /* increase height of hero banner */
     .hero-banner {
         height: 600px;
     }
 
-    .nav {
-        flex-wrap: wrap;
-    }
-
-    .nav a {
-        width: 50vw;
-    }
-
+    /* increase featured project height */
     .project:first-child {
         min-height: 400px;
     }
 
+    /* adjust all but featured project into 2 columns */
     .project:not(:first-child) {
         flex-basis: calc(45% - 20px);
     }
@@ -374,6 +394,7 @@ main section p {
         display: none;
     }
 
+    /* increase height of hero banner */
     .hero-banner {
         height: 800px;
     }
@@ -383,6 +404,7 @@ main section p {
         flex-wrap:  wrap;
     }
 
+    /* increase size of header title */
     header h1 {
         font-size: 70px;
     }
@@ -394,6 +416,7 @@ main section p {
         transition: none;
     }
 
+    /* reveale menu items */
     .nav a {
         width: 25%;
         height: var(--nav-item);
@@ -402,11 +425,13 @@ main section p {
         transition: none;
     }
 
+    /* increase section headers */
     main section h2 {
         font-size: 40px;
         border-bottom: solid 4px;
     }
 
+    /* increase height of all project to fit larger screen */
     .project {
         min-height: 250px;
     }
