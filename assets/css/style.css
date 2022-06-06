@@ -10,6 +10,12 @@
     --middle-blue: #7bd2e0ff;
     --white: #fff;
     --black: #000;
+    --shadow: #111;
+
+        /* other variables */
+        --nav-item: 36px;
+        --title-margin: 35px;
+        --logo-size: 70px;
 }
 
 body {
@@ -38,15 +44,63 @@ body {
     font-size: 25px;
 }
 
+/* DS logo */
+.logo {
+    position: relative;
+    background: var(--light);
+    min-width: var(--logo-size);
+    min-height: var(--logo-size);
+    margin: 0 var(--title-margin);
+    outline: 2px solid var(--black);
+}
+
+.logo-element {
+    border: 1px solid var(--black);
+}
+
+.logo-D {
+    position: absolute;
+    background: var(--primary);
+    width: calc(var(--logo-size) * 0.35);
+    height: calc(var(--logo-size) * 0.7);
+    border-radius: 0 calc(var(--logo-size) * 0.4) calc(var(--logo-size) * 0.4) 0;
+    box-shadow: 1px 1px 4px var(--dark-grey);
+    top: calc(var(--logo-size) * 0.15);
+    left: calc(var(--logo-size) * 0.075);
+}
+
+.logo-S {
+    position: absolute;
+    width: calc(var(--icon-size) / 2);
+    right: calc(var(--logo-size) * 0.12);
+}
+
+.logo-S .logo-element {
+    position: relative;
+    background: var(--middle-grey);
+    width: calc(var(--logo-size) * 0.25);
+    height: calc(var(--logo-size) * 0.50);
+    border-radius: 0 calc(var(--logo-size) * 0.3) calc(var(--logo-size) * 0.3) 0;
+}
+
+.logo-S .logo-element:nth-child(1) {
+    transform: rotate(-135deg);
+    top: calc(var(--logo-size) * 0.07);
+    right: calc(var(--logo-size) * 0.1);
+    box-shadow: -1px 0px 4px var(--dark-grey);
+}
+
+.logo-S .logo-element:nth-child(2) {
+    transform: rotate(45deg);
+    bottom: calc(var(--logo-size) * 0.07);
+    box-shadow: 0px -1px 4px var(--dark-grey);
+}
+
 header {
     /* variables for changing hambuger button size */
     --menu-button-width: 50px;
     --menu-button-height: 40px;
     --menu-button-text: 20px;
-
-    /* other variables for header formatting */
-    --nav-item: 36px;
-    --title-margin: 35px;
 
     /* header formatting */
     display: flex;
@@ -59,7 +113,7 @@ header {
 
 /* header title */
 header h1 {
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     margin: var(--title-margin);
     transition: all 0.8s;
@@ -161,6 +215,7 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
     transition: height 0.5s;
+    box-shadow: inset 0 0 15px var(--shadow);
 }
 
 /* My photo */
@@ -171,7 +226,7 @@ header h1 {
     max-height: 500px;
     margin: 4vw;
     border: var(--primary) solid 4px;
-    box-shadow: 5px 5px 15px #111;
+    box-shadow: 5px 5px 15px var(--shadow);
 }
 
 /* Welcome message */
@@ -180,7 +235,7 @@ header h1 {
     text-align: center;
     background-color: var(--highlight-50);
     padding: 20px;
-    border: #111 solid 2px;
+    border: var(--black) solid 2px;
     font-weight: 700;
     width: 100%;
     transition: all 0.5s;
@@ -338,7 +393,7 @@ main section p {
 }
 
 /* formatting for small screens and laptops */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) { 
     header h1 {
         font-size: 40px;
     }
@@ -349,7 +404,7 @@ main section p {
         margin-left: 4vw;
         margin-bottom: 30px;
         max-width: 500px;
-        box-shadow: 5px 5px 15px #111;
+        box-shadow: 5px 5px 15px var(--shadow);
     }
 
     .nav {
@@ -375,6 +430,7 @@ main section p {
     /* adjust hamberger menu button once the menu word has moved to the side */
     .menu-label {
         height: var(--menu-button-height);
+        margin-left: calc(var(--menu-button-width) * 3);
     }
 
     /* increase height of hero banner */
@@ -417,11 +473,13 @@ main section p {
     header {
         height: auto;
         flex-wrap:  wrap;
+        --logo-size: 100px;
     }
 
     /* increase size of header title */
     header h1 {
         font-size: 70px;
+        margin: var(--title-margin) auto;
     }
 
     /* reveal menu */
