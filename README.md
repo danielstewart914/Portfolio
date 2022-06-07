@@ -27,16 +27,7 @@ I currently have placeholders in the My Work section and will add links to my de
 
 Preview images on various screen sizes.
 
-<div class="images">
-    <img width="19%" src="./assets/images/portfolio-mobile-screenshot.png" />
-    <img width="39%" src="./assets/images/portfolio-tablet-screenshot.png" />
-    <img width="39%" src="./assets/images/portfolio-desktop-screenshot.png" />
-</div>
 
-<style>
-    img {
-        vertical-align: text-top;
-        display: inline;
-        border: 2px solid #000;
-    }
-</style>
+<img align="top" width="19%" src="./assets/images/portfolio-mobile-screenshot.png" />
+<img align="top" width="39%" src="./assets/images/portfolio-tablet-screenshot.png" />
+<img align="top" width="39%" src="./assets/images/portfolio-desktop-screenshot.png" />
