@@ -25,9 +25,7 @@ I currently have placeholders in the My Work section and will add links to my de
 ### Deployed Page
 [Click here to view Portfolio](https://danielstewart914.github.io/Portfolio/)
 
-Preview images on various screen sizes.
+Preview image.
 
+![Portfolio Preview Image](./assets/images/portfolio-desktop-screenshot.png)
 
-<img  width="19%" src="./assets/images/portfolio-mobile-screenshot.png" />
-<img  width="39%" src="./assets/images/portfolio-tablet-screenshot.png" />
-<img  width="39%" src="./assets/images/portfolio-desktop-screenshot.png" />
