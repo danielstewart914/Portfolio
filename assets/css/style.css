@@ -416,6 +416,12 @@ main section p {
     transition: all 0.2s ease-in-out;
 }
 
+footer {
+    text-align: center;
+    min-height: 30px;
+    margin: 10px;
+}
+
 /* formatting for small screens and laptops */
 @media screen and (min-width: 769px) { 
 
