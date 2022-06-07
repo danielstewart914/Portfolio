@@ -40,8 +40,9 @@ body {
     height: auto;
     padding: 5px;
     left: 10px;
-    top: 36px;
+    top: 120px;
     font-size: 25px;
+    z-index: 1;
 }
 
 header {
@@ -437,6 +438,7 @@ footer {
 
     .screenreader:focus {
         top: 50px;
+        left: 135px
     }
 
     /* hide menu button */
