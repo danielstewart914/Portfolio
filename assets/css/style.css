@@ -12,10 +12,10 @@
     --black: #000;
     --shadow: #111;
 
-        /* other variables */
-        --nav-item: 36px;
-        --title-margin: 20px;
-        --logo-size: 70px;
+    /* other variables */
+    --nav-item: 36px;
+    --title-margin: 20px;
+    --logo-size: 70px;
 }
 
 body {
