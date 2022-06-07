@@ -46,7 +46,7 @@ body {
 }
 
 header {
-    /* variables for changing hambuger button size */
+    /* variables for changing hamburger button size */
     --menu-button-width: 50px;
     --menu-button-height: 40px;
     --menu-button-text: 20px;
@@ -115,7 +115,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* lines on hambuger menu */
+/* lines on hamburger menu */
 .menu-label .bar {
     background: var(--light);
     display: block;
@@ -127,7 +127,7 @@ header h1 {
     transition: all ease-in-out 0.3s;
 }
 
-/* animate hambuger menu */
+/* animate hamburger menu */
 
 /* rotate and move top bar down to form X */
 #menu-input:checked ~ .menu-label .bar:nth-child(2) {
@@ -412,7 +412,7 @@ footer {
         font-size: 40px;
     }
 
-    /* adjust hamberger menu button once the menu word has moved to the side */
+    /* adjust hamburger menu button once the menu word has moved to the side */
     .menu-label {
         height: var(--menu-button-height);
         margin-left: calc(var(--menu-button-width) * 3);
