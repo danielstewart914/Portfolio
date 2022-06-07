@@ -15,7 +15,7 @@
     /* other variables */
     --nav-item: 36px;
     --title-margin: 20px;
-    --logo-size: 70px;
+        --logo-size: 70px;
 }
 
 body {
@@ -310,7 +310,7 @@ main section p {
     flex: 1 0 calc(95% - 20px);
     background-color: var(--highlight-50);
     background-blend-mode: soft-light;
-    background-size: 100%;
+    background-size: 105%;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 200px;
@@ -347,8 +347,32 @@ main section p {
 
 /* Background images for projects */
 
-.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7 {
-    background-image: url("https://via.placeholder.com/1000?text=Project+Placeholder+Image");
+.item-1 {
+    background-image: url("../images/rainier-bg.jpg");
+}
+
+.item-2 {
+    background-image: url("../images/red-panda-bg.jpg");
+}
+
+.item-3 {
+    background-image: url("../images/tree-bg.jpg");
+} 
+
+.item-4 {
+    background-image: url("../images/water-lilly-bg.jpg");
+}
+
+.item-5 {
+    background-image: url("../images/plumeria-bg.JPG");
+}
+
+.item-6 {
+    background-image: url("../images/westpoint-lighthouse-bg.jpg");
+}
+
+.item-7 {
+    background-image: url("../images/beach-shells-bg.jpg");
 }
 
 .contact address {
