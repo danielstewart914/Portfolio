@@ -257,9 +257,7 @@ main section p {
     flex-direction: column;
     align-items: flex-start;
     flex: 1 0 calc(95% - 20px);
-    background-color: var(--highlight-50);
-    background-blend-mode: soft-light;
-    background-size: 105%;
+    background-size: 210%;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 200px;
@@ -269,9 +267,21 @@ main section p {
     transition: all 0.3s ease-in-out;
 }
 
+@media ( hover ) {
+    .project {
+        background-color: var(--highlight-50);
+        background-blend-mode: soft-light;
+    }
+
+}
+
 /* make featured project larger */
 .project:first-child {
     min-height: 300px;
+}
+
+.project:not(:first-child) {
+    background-size: 105%;
 }
 
 /* Fade background blend and expand slightly when hovered or focused */
@@ -302,7 +312,7 @@ main section p {
 /* Background images for projects */
 
 .item-1 {
-    background-image: url("../images/rainier-bg.jpg");
+    background-image: url("../images/javascript-quiz.png");
 }
 
 .item-2 {
@@ -426,6 +436,7 @@ footer {
     /* increase featured project height */
     .project:first-child {
         min-height: 400px;
+        background-size: 150%;
     }
 
     /* adjust all but featured project into 2 columns */
@@ -495,8 +506,9 @@ footer {
     }
 
     /* increase height of all project to fit larger screen */
-    .project {
+    .project:first-child {
         min-height: 250px;
+        background-size: 105%;
     }
 }
     
