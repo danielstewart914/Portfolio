@@ -282,6 +282,7 @@ main section p {
 
 .project:not(:first-child) {
     background-size: 105%;
+    background-position: left 50% top 15%;
 }
 
 /* Fade background blend and expand slightly when hovered or focused */
@@ -309,18 +310,23 @@ main section p {
     padding-bottom: 5px;
 }
 
+.project-subtitle {
+    display: block;
+    padding: 0.125em;
+}
+
 /* Background images for projects */
 
 .item-1 {
-    background-image: url("../images/javascript-quiz.png");
+    background-image: url("../images/cards-for-jokes.png");
 }
 
 .item-2 {
-    background-image: url("../images/red-panda-bg.jpg");
+    background-image: url("../images/javascript-quiz.png");
 }
 
 .item-3 {
-    background-image: url("../images/tree-bg.jpg");
+    background-image: url("../images/weather-dashboard.png");
 } 
 
 .item-4 {
@@ -384,6 +390,12 @@ footer {
     text-align: center;
     min-height: 30px;
     margin: 10px;
+}
+
+@media screen and (min-width: 480px) {
+    .project:not(:first-child) {
+        background-position: left 50% top 35%
+    }
 }
 
 /* formatting for small screens and laptops */
@@ -509,6 +521,18 @@ footer {
     .project:first-child {
         min-height: 250px;
         background-size: 105%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .project:not(:first-child) {
+        background-position: left 50% top 40%
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .project:not(:first-child) {
+        background-position: left 50% top 45%
     }
 }
     
